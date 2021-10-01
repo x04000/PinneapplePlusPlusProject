@@ -85,49 +85,47 @@ p_python3              - Use the python3 terminal
                     print(linea)
         except:
             print("File can't load!")
-        if pcpp == "p_packages":
-            print("")
-            print("[Piña++ Package List]")
-            print("")
-            print("Installed")
-            if importlogin == 1:
-                print("login")
-            if importroot == 1:
+    if pcpp == "p_packages":
+        print("")
+        print("[Piña++ Package List]")
+        print("")
+        print("Installed")
+        if importlogin == 1:
+            print("login")
+        if importroot == 1:
+            print("root")
+        if importlogin == 0:
+            print("login")
+        if importroot == 0:
                 print("root")
-            print("")
-            print("Not installed")
-            if importlogin == 0:
-                print("login")
-            if importroot == 0:
-                print("root")
-        if pcpp == "p_rmpackage-login":
-            print("")
-            if importlogin == 1:
-                print("Are you sure? [Y/N]")
-                sure = str(input("Piña++ OPTION > "))
-                if sure == "Y" or "y":
-                    importlogin = 0
-                    print("Package login has been removed!")
-                if sure == "N" or "n":
-                    print("Package login hasn't been removed!")
-                else:
-                    print("Invalid option!")
+    if pcpp == "p_rmpackage-login":
+        print("")
+        if importlogin == 1:
+            print("Are you sure? [Y/N]")
+            sure = str(input("Piña++ OPTION > "))
+            if sure == "Y" or "y":
+                importlogin = 0
+                print("Package login has been removed!")
+            if sure == "N" or "n":
+                print("Package login hasn't been removed!")
             else:
-                print("Package is not installed!")
-        if pcpp == "p_rmpackage-root":
-            print("")
-            if importlogin == 1:
-                print("Are you sure? [Y/N]")
-                sure = str(input("Piña++ OPTION > "))
-                if sure == "Y" or "y":
-                    importroot = 0
-                    print("Package login has been removed!")
-                if sure == "N" or "n":
-                    print("Package login hasn't been removed!")
-                else:
-                    print("Invalid option!")
+                print("Invalid option!")
+        else:
+            print("Package is not installed!")
+    if pcpp == "p_rmpackage-root":
+        print("")
+        if importlogin == 1:
+            print("Are you sure? [Y/N]")
+            sure = str(input("Piña++ OPTION > "))
+            if sure == "Y" or "y":
+                importroot = 0
+                print("Package login has been removed!")
+            if sure == "N" or "n":
+                print("Package login hasn't been removed!")
             else:
-                print("Package is not installed!")
+                print("Invalid option!")
+        else:
+            print("Package is not installed!")
     if pcpp == "p_import:login":
         importlogin = 1
         print("Imported sucessfull login!")
