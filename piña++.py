@@ -89,11 +89,12 @@ p_python3              - Use the python3 terminal
         print("")
         print("[Piña++ Package List]")
         print("")
-        print("Installed")
+        print("[Installed]")
         if importlogin == 1:
             print("login")
         if importroot == 1:
             print("root")
+        print("[Not installed]")
         if importlogin == 0:
             print("login")
         if importroot == 0:
@@ -106,7 +107,7 @@ p_python3              - Use the python3 terminal
             if sure == "Y" or "y":
                 importlogin = 0
                 print("Package login has been removed!")
-            if sure == "N" or "n":
+            elif sure == "N" or "n":
                 print("Package login hasn't been removed!")
             else:
                 print("Invalid option!")
@@ -120,7 +121,7 @@ p_python3              - Use the python3 terminal
             if sure == "Y" or "y":
                 importroot = 0
                 print("Package login has been removed!")
-            if sure == "N" or "n":
+            elif sure == "N" or "n":
                 print("Package login hasn't been removed!")
             else:
                 print("Invalid option!")
@@ -150,7 +151,6 @@ p_python3              - Use the python3 terminal
                         """)
                         print("Username="+useri)
                         print("Password="+passwordi)
-                        break
                     else:
                         print("Incorrect password!")
                 else:
